@@ -19,5 +19,6 @@ public class ExampleApp implements CommandLineRunner {
 		System.out.println("Started");
 		System.out.println(mapper.findAll());
 		System.out.println(mapper.findAllMap());
+		System.out.println(mapper.findAllXml());
 	}
 }

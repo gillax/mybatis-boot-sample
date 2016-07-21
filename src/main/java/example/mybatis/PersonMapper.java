@@ -11,6 +11,8 @@ public interface PersonMapper {
 	@Select("SELECT * FROM people")
 	List<Person> findAll();
 
+	List<Person> findAllXml();
+
 	@MapKey("id")
 	@Select("SELECT * FROM people")
 	Map<Integer, Person> findAllMap();
