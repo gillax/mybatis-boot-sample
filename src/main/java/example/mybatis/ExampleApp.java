@@ -1,5 +1,6 @@
 package example.mybatis;
 
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,5 +21,6 @@ public class ExampleApp implements CommandLineRunner {
 		System.out.println(mapper.findAll());
 		System.out.println(mapper.findAllMap());
 		System.out.println(mapper.findAllXml());
+		System.out.println(mapper.findAll().stream().collect(Collectors.toMap(Person::getId, v -> v)));
 	}
 }
